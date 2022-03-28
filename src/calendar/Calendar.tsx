@@ -2,7 +2,7 @@ import { AppRouter } from "./routers/AppRouter";
 
 export const Calendar = () => {
     return (
-        <main>
+        <main className="h-screen w-screen">
             <AppRouter />
         </main>
     );

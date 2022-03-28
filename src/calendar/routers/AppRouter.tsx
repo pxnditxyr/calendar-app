@@ -4,18 +4,16 @@ import {
     Route
 } from 'react-router-dom';
 import { CalendarPage } from '../components/calendar/CalendarPage';
-import { HomePage } from '../components/home/HomePage';
 import { AuthRouter } from './AuthRouter';
-import { NotFoundPage } from '../components/not-found/NotFoundPage';
+import { PublicRouter } from './PublicRouter';
 
 export const AppRouter = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={ <HomePage /> } />
+                <Route path="/*" element={ <PublicRouter /> } />
                 <Route path="auth/*" element={ <AuthRouter /> } />
-                <Route path="/calendar" element={ <CalendarPage /> } />
-                <Route path="*" element={ <NotFoundPage /> } />
+                <Route path="calendar" element={ <CalendarPage /> } />
             </Routes>
         </BrowserRouter>
 
